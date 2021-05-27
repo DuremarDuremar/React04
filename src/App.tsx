@@ -1,7 +1,8 @@
 import React from "react";
+// import { fil } from "./components/test";
 
-function App() {
+const App: React.FC = () => {
   return <div className="App">44</div>;
-}
+};
 
 export default App;
