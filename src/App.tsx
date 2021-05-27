@@ -1,8 +1,12 @@
 import React from "react";
-// import { fil } from "./components/test";
+import UserList from "./components/UserList";
 
 const App: React.FC = () => {
-  return <div className="App">44</div>;
+  return (
+    <div className="App">
+      <UserList />
+    </div>
+  );
 };
 
 export default App;
