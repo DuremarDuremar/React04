@@ -18,6 +18,18 @@ export const Video = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 2;
+  background: #fff;
+`;
+
+export const Youtube = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* z-index: 2; */
 `;
 
 export const Play = styled.button`
