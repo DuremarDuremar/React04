@@ -1,11 +1,12 @@
 import React from "react";
-import UserList from "./components/UserList";
+import { Global, Content } from "./style/app_style";
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <UserList />
-    </div>
+    <>
+      <Global />
+      <Content>333677</Content>
+    </>
   );
 };
 
