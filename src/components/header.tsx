@@ -7,8 +7,20 @@ import {
   Ellipse,
   Group,
   Youtube,
+  Title,
+  Text,
+  Properties,
 } from "../style/header_style";
-import { logo, arrow, ellipse, group } from "../assets/header_svg";
+import {
+  logo,
+  arrow,
+  ellipse,
+  group,
+  prop1,
+  prop2,
+  prop3,
+  prop4,
+} from "../assets/header_svg";
 
 interface IProps {
   setFog: React.Dispatch<React.SetStateAction<boolean>>;
@@ -39,6 +51,49 @@ const Header: React.FC<IProps> = ({ setFog, fog }) => {
           </Youtube>
         )}
       </Video>
+      <Title>
+        <h1>
+          <strong>Фото на</strong>
+          <br /> праздник
+        </h1>
+      </Title>
+      <Text>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur{" "}
+          <strong>adipiscing elit</strong>, sed do eiusmod tempor <br />
+          incididunt ut labore et dolore magna <br />
+          aliqua.
+        </p>
+      </Text>
+      <Properties>
+        <div>
+          {prop1}
+          <p>
+            Безлимитная <br />
+            печать фото
+          </p>
+        </div>
+        <div>
+          {prop2}
+          <p>
+            Фотореквизит <br />в наличии
+          </p>
+        </div>
+        <div>
+          {prop3}
+          <p>
+            Фотоотчет в <br />
+            электронном виде
+          </p>
+        </div>
+        <div>
+          {prop4}
+          <p>
+            Цены <br />
+            ниже рынка
+          </p>
+        </div>
+      </Properties>
     </Content>
   );
 };

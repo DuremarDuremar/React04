@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const Content = styled.section`
-  min-height: 500px;
-`;
+export const Content = styled.section``;
 
 export const Logo = styled.div`
   padding: 10px 0 0 12px;
@@ -58,4 +56,50 @@ export const Group = styled.div`
   position: absolute;
   top: -13px;
   right: -13px;
+`;
+
+export const Title = styled.div`
+  width: 328.01px;
+  margin: 20px auto 0;
+  h1 {
+    padding-top: 30px;
+    font-family: Roboto Slab;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 53px;
+    strong {
+      color: #ee3d48;
+    }
+  }
+`;
+
+export const Text = styled.div`
+  width: 328.01px;
+  margin: 20px auto 0;
+  font-family: Work Sans;
+  font-size: 16px;
+  line-height: 130%;
+  color: #131313;
+  strong {
+    color: #ee3d48;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+`;
+
+export const Properties = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-top: 25px;
+  div {
+    text-align: center;
+  }
+  p {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+  }
 `;
