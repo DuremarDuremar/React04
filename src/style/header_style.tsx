@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
-export const Content = styled.section``;
+export const Content = styled.section`
+  width: 328.01px;
+  margin: 0px auto;
+`;
 
 export const Logo = styled.div`
   padding: 10px 0 0 12px;
 `;
 
 export const Video = styled.div`
-  width: 328.01px;
   height: 200.54px;
   border: 3px solid #ee3d48;
-  margin: 0px auto;
   margin-top: 41px;
   display: flex;
   justify-content: center;
@@ -59,11 +60,10 @@ export const Group = styled.div`
 `;
 
 export const Title = styled.div`
-  width: 328.01px;
-  margin: 20px auto 0;
+  margin-top: 20px;
   h1 {
     padding-top: 30px;
-    font-family: Roboto Slab;
+    font-family: "Roboto Slab", serif;
     font-weight: bold;
     font-size: 40px;
     line-height: 53px;
@@ -76,7 +76,7 @@ export const Title = styled.div`
 export const Text = styled.div`
   width: 328.01px;
   margin: 20px auto 0;
-  font-family: Work Sans;
+  font-family: "Work Sans", sans-serif;
   font-size: 16px;
   line-height: 130%;
   color: #131313;
@@ -96,7 +96,7 @@ export const Properties = styled.div`
     text-align: center;
   }
   p {
-    font-family: Work Sans;
+    font-family: "Work Sans";
     font-style: normal;
     font-weight: 600;
     font-size: 14px;

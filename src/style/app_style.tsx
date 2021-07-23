@@ -43,7 +43,7 @@ export const Content = styled.div`
   margin: 0px auto;
   max-width: 375px;
   position: relative;
-  min-height: 1000px;
+  min-height: 1500px;
 `;
 
 export const Fog = styled.div`

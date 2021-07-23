@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import {
   Content,
   Logo,
@@ -27,7 +27,7 @@ interface IProps {
   fog: boolean;
 }
 
-const Header: React.FC<IProps> = ({ setFog, fog }) => {
+const Header: FC<IProps> = ({ setFog, fog }) => {
   const [tube, setTube] = useState<boolean>(false);
 
   return (
