@@ -1,5 +1,7 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
+
 import { Content, Header } from "../style/cards_style";
+import Card from "./card";
 
 const Cards: FC = () => {
   return (
@@ -13,6 +15,7 @@ const Cards: FC = () => {
           <option>По цене</option>
         </select>
       </Header>
+      <Card />
     </Content>
   );
 };
