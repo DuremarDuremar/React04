@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import Swipe from "swipejs/react";
 
 import { arrowLeft, arrowRight } from "../assets/cards_svg";
 import {
@@ -20,24 +20,16 @@ const images = [
 ];
 
 const Card: FC = () => {
-  const { ref, inView, entry } = useInView({
-    threshold: 0,
-  });
-
-  console.log(inView);
-  console.log(entry?.target.id);
   return (
     <Content>
       <Slider>
-        {/* <Arrow left>{arrowLeft}</Arrow> */}
         {images.map((item, index) => {
           return (
-            <Image key={index} ref={ref} id={String(index)}>
-              <img src={item} alt="30" />
+            <Image key={index} id={String(index)}>
+              <img src={item} alt="330" />
             </Image>
           );
         })}
-        {/* <Arrow>{arrowRight}</Arrow> */}
       </Slider>
       <Title></Title>
       <Info></Info>
@@ -48,3 +40,17 @@ const Card: FC = () => {
 };
 
 export default Card;
+
+{
+  /* <Arrow left>{arrowLeft}</Arrow> */
+}
+//  {images.map((item, index) => {
+//   return (
+//     <Image key={index} id={String(index)}>
+//       <img src={item} alt="30" />
+//     </Image>
+//   );
+// })}
+{
+  /* <Arrow>{arrowRight}</Arrow> */
+}
