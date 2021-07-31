@@ -1,17 +1,32 @@
 import styled from "styled-components";
+import Slider from "react-slick";
 
 export const Content = styled.div`
   position: relative;
 `;
 
-export const Slider = styled.div`
-  display: flex;
-  overflow-x: scroll;
-`;
+// export const Wrapper = styled.div`
+//   display: flex;
+//   overflow-x: scroll;
+// `;
 export const Image = styled.div`
   img {
     width: 296px;
     height: 222px;
+  }
+`;
+
+export const Wrapper = styled(Slider)`
+  width: 100%;
+  overflow-x: hidden;
+
+  .slick-slide {
+    width: 296px;
+    height: 222px;
+  }
+
+  .slick-track {
+    display: flex;
   }
 `;
 
@@ -24,9 +39,10 @@ export const Arrow = styled.div<{ left?: boolean }>`
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: ${(props) => (props.left ? "6px" : "250px")};
+  left: ${(props) => (props.left ? "6px" : "249px")};
   top: 50%;
   cursor: pointer;
+  z-index: 1;
 `;
 
 export const Title = styled.div``;

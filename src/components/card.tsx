@@ -1,10 +1,9 @@
 import React, { FC, useState } from "react";
-import Swipe from "swipejs/react";
 
 import { arrowLeft, arrowRight } from "../assets/cards_svg";
 import {
   Content,
-  Slider,
+  Wrapper,
   Image,
   Arrow,
   Title,
@@ -20,22 +19,35 @@ const images = [
 ];
 
 const Card: FC = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <Arrow>{arrowRight}</Arrow>,
+    prevArrow: <Arrow left>{arrowLeft}</Arrow>,
+  };
+
   return (
-    <Content>
-      <Slider>
-        {images.map((item, index) => {
-          return (
-            <Image key={index} id={String(index)}>
-              <img src={item} alt="330" />
-            </Image>
-          );
-        })}
-      </Slider>
-      <Title></Title>
-      <Info></Info>
-      <Time></Time>
-      <Cost></Cost>
-    </Content>
+    <>
+      <Content>
+        <Wrapper {...settings}>
+          {images.map((item, index) => {
+            return (
+              <Image key={index} id={String(index)}>
+                <img src={item} alt="330" />
+              </Image>
+            );
+          })}
+        </Wrapper>
+
+        <Title></Title>
+        <Info></Info>
+        <Time></Time>
+        <Cost></Cost>
+      </Content>
+    </>
   );
 };
 
