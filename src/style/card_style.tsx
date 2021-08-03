@@ -18,7 +18,7 @@ export const Image = styled.div`
 
 export const Wrapper = styled(Slider)`
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 
   .slick-slide {
     width: 296px;
@@ -35,7 +35,7 @@ export const Arrow = styled.div<{ left?: boolean }>`
   border-radius: 2px;
   width: 40px;
   height: 40px;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   position: absolute;

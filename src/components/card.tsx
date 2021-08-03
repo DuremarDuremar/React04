@@ -20,6 +20,7 @@ const images = [
 
 const Card: FC = () => {
   const settings = {
+    className: "slider variable-width",
     dots: false,
     infinite: true,
     speed: 500,
@@ -27,6 +28,7 @@ const Card: FC = () => {
     slidesToScroll: 1,
     nextArrow: <Arrow>{arrowRight}</Arrow>,
     prevArrow: <Arrow left>{arrowLeft}</Arrow>,
+    variableWidth: true,
   };
 
   return (
@@ -52,17 +54,3 @@ const Card: FC = () => {
 };
 
 export default Card;
-
-{
-  /* <Arrow left>{arrowLeft}</Arrow> */
-}
-//  {images.map((item, index) => {
-//   return (
-//     <Image key={index} id={String(index)}>
-//       <img src={item} alt="30" />
-//     </Image>
-//   );
-// })}
-{
-  /* <Arrow>{arrowRight}</Arrow> */
-}
