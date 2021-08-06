@@ -1,5 +1,7 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect } from "react";
+import { useDispatch } from "react-redux";
 
+import { axiosFrame } from "../store/actions/frameA";
 import { arrowLeft, arrowRight } from "../assets/cards_svg";
 import {
   Content,
@@ -19,6 +21,8 @@ const images = [
 ];
 
 const Card: FC = () => {
+  const dispatch = useDispatch();
+
   const settings = {
     className: "slider variable-width",
     dots: false,
@@ -30,6 +34,10 @@ const Card: FC = () => {
     prevArrow: <Arrow left>{arrowLeft}</Arrow>,
     variableWidth: true,
   };
+
+  useEffect(() => {
+    dispatch(axiosFrame());
+  }, []);
 
   return (
     <>

@@ -3,13 +3,13 @@ import axios from "axios";
 
 import { DefaultActionTypes, DefaultAction } from "../../types/default";
 
-export const fetchTop = (n: number) => {
+export const axiosFrame = (n?: number) => {
   return async (dispatch: Dispatch<DefaultAction>) => {
     try {
       dispatch({ type: DefaultActionTypes.FETCH_DEFAULT_LOADING });
 
       const res = axios.get(
-        `https://kinopoiskapiunofficial.tech/api/v2.1/films/888`,
+        `https://kinopoiskapiunofficial.tech/api/v2.1/films/888/frames`,
         {
           method: "GET",
           headers: {
