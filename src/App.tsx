@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { Global, Content, Fog } from "./style/app_style";
 import Header from "./components/header";
 import Cards from "./components/cards";

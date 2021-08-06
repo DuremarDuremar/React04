@@ -5,10 +5,6 @@ export const Content = styled.div`
   position: relative;
 `;
 
-// export const Wrapper = styled.div`
-//   display: flex;
-//   overflow-x: scroll;
-// `;
 export const Image = styled.div`
   img {
     width: 296px;
