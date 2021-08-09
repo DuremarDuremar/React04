@@ -9,7 +9,7 @@ export const axiosFrame = (n?: number) => {
       dispatch({ type: DefaultActionTypes.FETCH_DEFAULT_LOADING });
 
       const res = axios.get(
-        `https://kinopoiskapiunofficial.tech/api/v2.1/films/888/frames`,
+        `https://kinopoiskapiunofficial.tech/api/v2.1/films/848/frames`,
         {
           method: "GET",
           headers: {

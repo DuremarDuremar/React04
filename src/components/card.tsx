@@ -1,7 +1,5 @@
-import React, { FC, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import React, { FC } from "react";
 
-import { axiosFrame } from "../store/actions/frameA";
 import { arrowLeft, arrowRight } from "../assets/cards_svg";
 import {
   Content,
@@ -21,24 +19,6 @@ const images = [
 ];
 
 const Card: FC = () => {
-  const dispatch = useDispatch();
-
-  const settings = {
-    className: "slider variable-width",
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    nextArrow: <Arrow>{arrowRight}</Arrow>,
-    prevArrow: <Arrow left>{arrowLeft}</Arrow>,
-    variableWidth: true,
-  };
-
-  useEffect(() => {
-    dispatch(axiosFrame());
-  }, []);
-
   return (
     <>
       <Content>
@@ -59,6 +39,18 @@ const Card: FC = () => {
       </Content>
     </>
   );
+};
+
+const settings = {
+  className: "slider variable-width",
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  nextArrow: <Arrow>{arrowRight}</Arrow>,
+  prevArrow: <Arrow left>{arrowLeft}</Arrow>,
+  variableWidth: true,
 };
 
 export default Card;

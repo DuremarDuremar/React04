@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 
+import { axiosFrame } from "./store/actions/frameA";
 import { Global, Content, Fog } from "./style/app_style";
 import Header from "./components/header";
 import Cards from "./components/cards";
 
 const App: React.FC = () => {
+  const dispatch = useDispatch();
   const [fog, setFog] = useState<boolean>(false);
+
+  useEffect(() => {
+    dispatch(axiosFrame());
+  }, [dispatch]);
 
   return (
     <>
