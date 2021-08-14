@@ -1,13 +1,13 @@
 import React, { FC } from "react";
-
+import { useSelector } from "react-redux";
 import { Content, Header } from "../style/cards_style";
 import { useTypeSelector } from "../hooks/useTypeSelector";
 import Card from "./card";
 
 const Cards: FC = () => {
-  const { error, loading, items } = useTypeSelector((state) => state.frame);
+  const state = useSelector((state: any) => state.frame);
 
-  console.log(items);
+  console.log(state.items);
 
   return (
     <Content>

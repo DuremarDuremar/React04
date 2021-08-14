@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import { axiosFrame } from "./store/actions/frameA";
+import { axiosFrame } from "./store/slices";
 import { Global, Content, Fog } from "./style/app_style";
 import Header from "./components/header";
 import Cards from "./components/cards";

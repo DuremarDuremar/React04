@@ -23,7 +23,7 @@ export const axiosFrame = createAsyncThunk("slider/axiosFrame", async () => {
       },
     }
   );
-  return res;
+  return await res.then((res) => res.data.frames);
 });
 
 const sliderSlice: any = createSlice({
@@ -39,9 +39,9 @@ const sliderSlice: any = createSlice({
         state.loading = false;
         state.items = payload;
       })
-      .addCase(axiosFrame.rejected, (state, action: PayloadAction<any>) => {
+      .addCase(axiosFrame.rejected, (state, { payload }: any) => {
         state.loading = false;
-        state.error = action.payload;
+        state.error = payload;
       });
   },
 });
