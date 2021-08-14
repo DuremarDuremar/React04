@@ -1,11 +1,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 
-import {
-  DefaultState,
-  DefaultAction,
-  DefaultActionTypes,
-} from "../types/default";
+import { DefaultState } from "../types/default";
 
 const initialState: DefaultState = {
   loading: false,
@@ -26,9 +22,9 @@ export const axiosFrame = createAsyncThunk("slider/axiosFrame", async () => {
   return await res.then((res) => res.data.frames);
 });
 
-const sliderSlice: any = createSlice({
+const sliderSlice = createSlice({
   name: "slider",
-  initialState: initialState,
+  initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
@@ -46,6 +42,6 @@ const sliderSlice: any = createSlice({
   },
 });
 
-export const {} = sliderSlice.actions;
+// export const selectCount = (state: RootState) => state.counter.value
 
 export default sliderSlice.reducer;
